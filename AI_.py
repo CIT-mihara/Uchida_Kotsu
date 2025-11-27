@@ -136,18 +136,18 @@ def main():
     while(1):
         print("【ウチダ交通　交通ICカード検証システム】\n")
         mode = menu()
-        if   mode ==  1:
+        if   mode ==  1: #乗車駅選択
             print("【乗車駅選択】\n")
             fare = select_station()
-            if fare == 0:
+            if fare == 0: #選択終了
                 print("駅の選択をキャンセルしました．\n")
                 continue
-            else:
+            else: #運賃支払い
                 balance = pay(balance, fare)
-        elif mode ==  2:
+        elif mode ==  2: #チャージ機能
             print("【チャージ機能】\n")
             balance = charge(balance)  
-        elif mode == 99:
+        elif mode == 99: #システム終了
             print("システムを終了します\n")
             break
 
