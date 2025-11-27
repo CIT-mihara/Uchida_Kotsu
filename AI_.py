@@ -71,12 +71,9 @@ def pay(balance:int, fare:int) -> int:
     flag = False #チャージ完了フラグ
     
     if balance >= fare: #残高 >= 運賃
-        balance -= fare
         print(f"チャージ残高は{balance}円です．")
-        if balance < 500: #チャージ処理
-            print("残高が500円未満のため3000円自動チャージします．")
-            balance += 3000
-            print(f"チャージ残高は{balance}円です．")
+        balance -= fare
+        print(f"精算後のチャージ残高は{balance}円です．")
     else: #残高 < 運賃
         print(f"チャージ残高は{balance}円です．")
         print("残高不足です．")
@@ -88,6 +85,11 @@ def pay(balance:int, fare:int) -> int:
                 balance -= fare
                 print(f"精算後のチャージ残高は{balance}円です．")
                 flag = True
+
+    if balance < 500: #チャージ処理
+        print("残高が500円未満のため3000円自動チャージします．")
+        balance += 3000
+        print(f"チャージ残高は{balance}円です．")
 
     print("")
     return balance
@@ -125,9 +127,9 @@ def charge(balance:int) -> int:
         chargeAmount = amount[select-1]
         print(f"{chargeAmount}円チャージします．")
         balance += chargeAmount
-        print(f"チャージ残高は{balance}円です．")
     else: #終了処理
         print("チャージをキャンセルしました．")
+    print(f"チャージ残高は{balance}円です．")
     print("")
     return balance
 
