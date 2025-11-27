@@ -89,7 +89,7 @@ def pay(balance:int, fare:int) -> int:
                 print(f"精算後のチャージ残高は{balance}円です．")
                 flag = True
 
-    print("\n")
+    print("")
     return balance
 
 def charge(balance:int) -> int:
@@ -128,7 +128,7 @@ def charge(balance:int) -> int:
         print(f"チャージ残高は{balance}円です．")
     else: #終了処理
         print("チャージをキャンセルしました．")
-    print("\n")
+    print("")
     return balance
 
 def main():
