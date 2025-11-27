@@ -136,7 +136,7 @@ def charge(balance:int) -> int:
 def main():
     balance = 500
     while(1):
-        print("【ウチダ交通　交通ICカード検証システム】\n")
+        print("【ウチダ電鉄　交通系ICカード検証システム】\n")
         mode = menu()
         if   mode ==  1: #乗車駅選択
             print("【乗車駅選択】\n")
