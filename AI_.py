@@ -10,7 +10,7 @@ def menu() -> int: #menu関数
     print("1：乗車駅選択")
     print("2：チャージ機能")
     print("")
-    print("使用する機能を選択してください(終了する場合は99を入力)")
+    print("使用する機能を選択してください(終了する場合には99を入力)")
     
     while(not flag): #入力ループ
         try:
@@ -39,9 +39,9 @@ def select_station() -> int:
               ]
 
     for i in range(len(station)):
-        print(f"{i+1}:{station[i][0]}から\t{station[i][1]}円")
+        print(f"{i+1}:{station[i][0]}駅から\t{station[i][1]}円")
     print("")
-    print("乗車する駅を選択してください(キャンセルする場合は99を入力)")
+    print("乗車する駅を選択してください(キャンセルする場合には99を入力)")
     
     while(not flag): #入力ループ
         try:
@@ -105,7 +105,7 @@ def charge(balance:int) -> int:
         print(f"{i+1}:{amount[i]}円")
 
     print("")
-    print("チャージする金額を選択してください(キャンセルする場合は99を入力)")
+    print("チャージする金額を選択してください(キャンセルする場合には99を入力)")
 
     while(not flag): #入力ループ
         try:
